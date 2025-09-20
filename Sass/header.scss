@@ -1,0 +1,110 @@
+@import '_variables';
+
+.header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: $primary-background;
+    box-shadow: $box-shadow;
+    z-index: 1000;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+        h3 {
+            color: $primary-text-color;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            letter-spacing: .5rem;
+            span {
+                color: $main-color;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .navbar {
+        a {
+            color: $primary-text-color;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: .3rem;
+            padding: 0 1rem;
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+    .other-links {
+        transition: .4s linear;
+        position: absolute;
+        top: -50rem; right: 3rem;
+        background: $primary-background;
+        border-radius: .5rem;
+        box-shadow: $box-shadow;
+        width: 30rem;
+        padding: 2rem;
+        text-align: center;
+        &.drop-down {
+            top: 100%;
+        }
+        a {
+            display: block;
+            padding: 1rem 0;
+        }
+    }
+    .fa-bars {
+        font-size: 1.8rem;
+        color: $primary-text-color;
+        display: none;
+        cursor: pointer;
+        &:hover {
+            color: $main-color;
+        }
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .header {
+        padding: 2rem;
+        position: relative;
+        .navbar {
+            position: absolute;
+            top: 100%; right: 0; left: 0;
+            width: 100%; height: 100vh;
+            flex-direction: column;
+            padding: 2rem;
+            background: $secondary-background;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            &.toggle {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            }
+            a {
+                display: block;
+                text-align: center;
+                margin: 2rem 0;
+                padding: 1.2rem 0;
+                background: $sub-color;
+                border-radius: .5rem;
+                color: $main-color;
+                &:hover {
+                    color: $sub-color;
+                    background: $main-color;
+                }
+            }
+            .other-links {
+                width: 100%;
+                right: 0; top: -50rem;
+                background: inherit;
+                box-shadow: none;
+                &.drop-down {
+                    top: 32rem;
+                }
+            }
+        }
+        #navbar-btn {
+            display: inline-block;
+        }
+    }
+}

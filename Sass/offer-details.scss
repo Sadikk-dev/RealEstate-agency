@@ -1,0 +1,256 @@
+@import '_variables';
+
+@keyframes Slide {
+    0% {
+        transform: translateX(50rem);
+    }
+}
+
+.offer-details {
+    padding-top: 10rem;
+    .images-container {
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        .images {
+            flex: 1 1 20rem;
+            h3 {
+                font-size: 1.8rem;
+                color: $primary-text-color;
+                text-transform: uppercase;
+                letter-spacing: .3rem;
+                padding: 2rem 1rem;
+            }
+            img {
+                width: 12rem; height: 12rem;
+                object-fit: cover;
+                margin-left: 1rem;
+                opacity: .5;
+                cursor: pointer;
+                &.active, &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+        .current-image {
+            flex: 1 1 80rem;
+            // overflow: hidden;
+            img {
+                width: 100%;
+                object-fit: cover;
+                border-radius: .5rem;
+            }
+        }
+    }
+
+    .details-container {
+        margin-top: 5rem;
+        .headlines {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            h2 {
+                font-size: 1.8rem;
+                color: $primary-text-color;
+                text-transform: uppercase;
+                letter-spacing: .3rem;
+                border-bottom: .1rem solid $secondary-text-color;
+                padding: .5rem 1rem;
+                cursor: pointer;
+                &.active, &:hover {
+                    border-color: $main-color;
+                }
+            }
+        }
+        .content {
+            margin-top: 3rem;
+            .box {
+                width: 100%; height: 120rem;
+                display: none;
+                &.active {
+                    display: inline-block;
+                }
+                &.slide {
+                    animation: Slide .4s linear;
+                }
+                .name {
+                    color: $main-color;
+                    font-size: 1.8rem;
+                    text-transform: uppercase;
+                    letter-spacing: .3rem;
+                    padding: .7rem 0;
+                }
+                .price {
+                    font-size: 1.8rem;
+                    color: $secondary-text-color;
+                    padding: .5rem 0;
+                }
+                .location {
+                    font-size: 1.8rem;
+                    color: $secondary-text-color;
+                    padding: .7rem 0;
+                    letter-spacing: .3rem;
+                }
+                .area {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+                    gap: 1.5rem;
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+                    div {
+                        display: flex;
+                        align-items: center;
+                        h4 {
+                            font-size: 1.8rem;
+                            color: $secondary-text-color;
+                        }
+                        i {
+                            font-size: 1.8rem;
+                            color: $main-color;
+                            margin-right: .7rem;
+                        }
+                    }
+                }
+                .description {
+                    color: $secondary-text-color;
+                    font-size: 1.8rem;
+                    line-height: 1.8;
+                    padding: .7rem 0;
+                }
+                .map {
+                    padding-top: 2rem;
+                    width: 100%; height: 50rem;
+                }
+                .infos {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+                    gap: 1.5rem;
+                    margin-top: 2rem;
+                    div {
+                        h2 {
+                            color: 1.8rem;
+                            color: $primary-text-color;
+                            letter-spacing: .3rem;
+                            text-transform: uppercase;
+                        }
+                        .flex {
+                            display: flex;
+                            align-items: center;
+                            padding: 1rem 0;
+                            i {
+                                font-size: 1.8rem;
+                                color: $main-color;
+                                margin-right: .7rem;
+                            }
+                            h4 {
+                                color: $secondary-text-color;
+                                font-size: 1.8rem;
+                            }
+                        }
+                    }
+                }
+                .features {
+                    .grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+                        gap: 1.5rem;
+                        margin-top: 2rem;
+                        div {
+                            display: flex;
+                            align-items: center;
+                            i {
+                                font-size: 1.8rem;
+                                color: $main-color;
+                                margin-right: .7rem;
+                            }
+                            h4 {
+                                font-size: 1.8rem;
+                                color: $secondary-text-color;
+                            }
+                        }
+                    }
+                }
+                .notices {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    .notice {
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        gap: 2rem;
+                        padding: 2rem 0;
+                        img {
+                            height: 10rem; width: 10rem;
+                            border: .3rem solid $main-color;
+                            border-radius: 50%;
+                            object-fit: cover;
+                        }
+                        .content {
+                            h3 {
+                                font-size: 1.8rem;
+                                color: $primary-text-color;
+                            }
+                            p {
+                                font-size: 1.8rem;
+                                color: $secondary-text-color;
+                                line-height: 1.8;
+                                padding: 1rem 0;
+                            }
+                            .stars {
+                                i {
+                                    font-size: 1.8rem;
+                                    color: $main-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .offer-details {
+        .images-container {
+            .images {
+                overflow: scroll;
+                padding-bottom: 1rem;
+                img {
+                    width: 10rem; height: 10rem;
+                }
+                &::-webkit-scrollbar {
+                    height: 0.5rem;
+                  }
+                  &::-webkit-scrollbar-thumb {
+                    background: $main-color;
+                    border-radius: 1rem;
+                  }
+                  &::-webkit-scrollbar-track {
+                    background: $light-color;
+                  }
+            }
+            .current-image {
+                img {
+                    height: 60rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .offer-details {
+        .images-container {
+            .current-image {
+                img {
+                    height: 50rem;
+                }
+            }
+        }
+    }
+}

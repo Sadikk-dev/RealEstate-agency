@@ -1,0 +1,135 @@
+.footer {
+  padding-top: 7rem;
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.footer .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+
+.footer .box-container .box .title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #333;
+  padding: 1rem 0;
+  letter-spacing: .3rem;
+}
+
+.footer .box-container .box .location h3,
+.footer .box-container .box .opening-hours h3 {
+  font-size: 1.8rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  padding: .7rem 0;
+}
+
+.footer .box-container .box .location p,
+.footer .box-container .box .opening-hours p {
+  color: #666;
+  font-size: 1.5rem;
+  padding: .7rem 0;
+}
+
+.footer .box-container .box .location p span,
+.footer .box-container .box .opening-hours p span {
+  color: #333;
+}
+
+.footer .box-container .box .logo h3 {
+  color: #333;
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: .5rem;
+}
+
+.footer .box-container .box .logo h3 span {
+  color: #ff5a3c;
+  text-transform: uppercase;
+}
+
+.footer .box-container .box .about {
+  font-size: 1.5rem;
+  color: #666;
+  line-height: 1.8;
+  padding: 1rem;
+}
+
+.footer .box-container .box a {
+  display: block;
+  color: #666;
+  font-size: 1.5rem;
+  padding: .7rem 0;
+}
+
+.footer .box-container .box a:hover {
+  color: #ff5a3c;
+}
+
+.footer .box-container .box a i {
+  color: #ff5a3c;
+  padding-right: .7rem;
+}
+
+.footer .box-container .box form .input-box {
+  width: 100%;
+  padding: 1.2rem 2rem;
+  background: #eee;
+  border-radius: .5rem;
+  color: #333;
+  font-size: 1.8rem;
+  text-transform: none;
+}
+
+.footer .box-container .box form .input-box::-webkit-input-placeholder {
+  text-transform: capitalize;
+}
+
+.footer .box-container .box form .input-box:-ms-input-placeholder {
+  text-transform: capitalize;
+}
+
+.footer .box-container .box form .input-box::-ms-input-placeholder {
+  text-transform: capitalize;
+}
+
+.footer .box-container .box form .input-box::placeholder {
+  text-transform: capitalize;
+}
+
+.footer .box-container .box form .button {
+  width: 30rem;
+}
+
+.footer .box-container .box form .button:hover {
+  color: #f9edeb;
+  background: #ff5a3c;
+}
+
+.footer .credit {
+  padding-top: 4rem;
+  margin-top: 2rem;
+  text-align: center;
+  border-top: 0.1rem solid #333;
+}
+
+.footer .credit p {
+  color: #666;
+  font-size: 1.8rem;
+  letter-spacing: .3rem;
+}
+
+.footer .credit p i {
+  color: red;
+}
+
+.footer .credit p span {
+  color: #ff5a3c;
+  cursor: pointer;
+}
+/*# sourceMappingURL=footer.css.map */

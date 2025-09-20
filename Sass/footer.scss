@@ -1,0 +1,108 @@
+@import '_variables';
+
+.footer {
+    padding-top: 7rem;
+    box-shadow: $box-shadow;
+    .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 2rem;
+        .box {
+            .title {
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                color: $primary-text-color;
+                padding: 1rem 0;
+                letter-spacing: .3rem;
+            }
+            .location, 
+            .opening-hours {
+                h3 {
+                    font-size: 1.8rem;
+                    color: $primary-text-color;
+                    text-transform: uppercase;
+                    letter-spacing: .3rem;
+                    padding: .7rem 0;
+                }
+                p {
+                    color: $secondary-text-color;
+                    font-size: 1.5rem;
+                    padding: .7rem 0;
+                    span {
+                        color: $primary-text-color;
+                    }
+                }
+            }
+            .logo {
+                h3 {
+                    color: $primary-text-color;
+                    text-transform: uppercase;
+                    font-size: 2rem;
+                    letter-spacing: .5rem;
+                    span {
+                        color: $main-color;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            .about {
+                font-size: 1.5rem;
+                color: $secondary-text-color;
+                line-height: 1.8;
+                padding: 1rem;
+            }
+            a {
+                display: block;
+                color: $secondary-text-color;
+                font-size: 1.5rem;
+                padding: .7rem 0;
+                &:hover {
+                    color: $main-color;
+                }
+                i {
+                    color: $main-color;
+                    padding-right: .7rem;
+                }
+            }
+            form {
+                .input-box {
+                    width: 100%;
+                    padding: 1.2rem 2rem;
+                    background: #eee;
+                    border-radius: .5rem;
+                    color: $primary-text-color;
+                    font-size: 1.8rem;
+                    text-transform: none;
+                    &::placeholder {
+                        text-transform: capitalize;
+                    }
+                }
+                .button {
+                    width: 30rem;
+                    &:hover {
+                        color: $sub-color;
+                        background: $main-color;
+                    }
+                }
+            }
+        }
+    }
+    .credit {
+        padding-top: 4rem;
+        margin-top: 2rem;
+        text-align: center;
+        border-top: .1rem solid $primary-text-color;
+        p {
+            color: $secondary-text-color;
+            font-size: 1.8rem;
+            letter-spacing: .3rem;
+            i {
+                color: red;
+            }
+            span {
+                color: $main-color;
+                cursor: pointer;
+            }
+        }
+    } 
+}
